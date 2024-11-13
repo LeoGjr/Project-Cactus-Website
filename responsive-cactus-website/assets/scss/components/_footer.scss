@@ -1,0 +1,59 @@
+/*=============== FOOTER ===============*/
+.footer{
+   padding-block: 4rem 2rem;
+
+   &__container{
+      row-gap: 4rem;
+   }
+   &__logo{
+      display: inline-flex;
+      align-items: center;
+      column-gap: .25rem;
+      color: var(--title-color);
+      font-size: var(--h2-font-size);
+      font-weight: var(--font-semi-bold);
+      margin-bottom: .75rem;
+
+      & i{
+         color: var(--first-color);
+         font-size: 1.5rem;
+         font-weight: initial;
+      }
+   }
+   &__content{
+      grid-template-columns: repeat(2, max-content);
+      gap: 4rem 3rem;
+   }
+   &__title{
+      font-size: var(--normal-font-size);
+      margin-bottom: 1rem;
+   }
+   &__links{
+      display: grid;
+      row-gap: .75rem;
+   }
+   &__link{
+      color: var(--text-color);
+      transition: color .4s;
+   }
+   &__social{
+      display: flex;
+      column-gap: .75rem;
+      
+      &-link{
+         color: var(--text-color);
+         font-size: 1.5rem;
+         transition: color .4s;
+      }
+   }
+   &__link:hover,
+   &__social-link:hover{
+      color: var(--first-color);
+   }
+   &__copy{
+      display: block;
+      margin-top: 6rem;
+      text-align: center;
+      font-size: var(--small-font-size);
+   }
+}

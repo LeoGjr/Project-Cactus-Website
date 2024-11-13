@@ -1,0 +1,33 @@
+/*=============== HOME ===============*/
+.home{
+   &__container{
+      padding-top: 2.5rem;
+      row-gap: 2rem;
+   }
+   &__img{
+      width: 270px;
+      filter: drop-shadow(var(--shadow-img));
+      justify-self: center;
+   }
+   &__data{
+      text-align: center;
+   }
+   &__title{
+      font-size: var(--biggest-font-size);
+      font-weight: var(--font-bold);
+      margin-bottom: 1rem;
+
+      & span{
+         color: var(--first-color);
+      }
+   }
+   &__description{
+      margin-bottom: 3rem;
+   }
+   &__buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: .5rem;
+   }
+}

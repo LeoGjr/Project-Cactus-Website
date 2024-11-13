@@ -1,0 +1,45 @@
+/*=============== NEWS ===============*/
+.new{
+   &__data{
+      text-align: center;
+   }
+   &__container{
+      row-gap: 7.5rem;
+   }
+   &__content{
+      row-gap: 6rem;
+   }
+   &__card{
+      position: relative;
+      width: 200px;
+      background: var(--gradient-card);
+      padding: 9rem .75rem 1.5rem .75rem;
+      border: 2px solid var(--first-color-light);
+      border-radius: 1.5rem;
+   }
+   &__img{
+      position: absolute;
+      top: -4.5rem;
+      left: 0;
+      right: 0;
+      width: 180px;
+      margin: 0 auto;
+      transition: transform .4s;
+   }
+   &__title{
+      font-size: var(--h2-font-size);
+      text-align: center;
+   }
+   &__card{
+      &:nth-child(odd){
+         rotate: -5deg;
+      }
+      &:nth-child(even){
+         justify-self: flex-end;
+         rotate: 5deg;
+      }
+   }
+   &__card:hover &__img{
+      transform: translateY(-.5rem);
+   }
+}

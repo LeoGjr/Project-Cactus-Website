@@ -1,0 +1,101 @@
+/*=============== HEADER & NAV ===============*/
+.header{
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background-color: transparent;
+   z-index: var(--z-fixed);
+}
+
+.nav{
+   position: relative;
+   height: var(--header-height);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &__logo,
+   &__close,
+   &__toggle,
+   &__actions{
+      display: flex;
+      color: var(--title-color);
+      cursor: pointer;
+   }
+   &__logo{
+      font-weight: var(--font-semi-bold);
+      column-gap: .25rem;
+      align-items: center;
+
+      & i{
+         color: var(--first-color);
+         font-size: 1.25rem;
+         font-weight: initial;
+      }
+   }
+   &__actions{
+      font-size: 1.25rem;
+      column-gap: .5rem;
+      align-items: center;
+   }
+   // Navigation for mobile devices
+   &__menu{
+      @media screen and (max-width: 1150px){
+         position: fixed;
+         top: 0;
+         right: -100%;
+         background-color: hsla(228, 24%, 6%, .2);
+         backdrop-filter: blur(16px);
+         -webkit-backdrop-filter: blur(16px);
+         width: 80%;
+         height: 100%;
+         padding: 6rem 3rem 0;
+         transition: right .4s;
+      }
+   }
+   &__list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+   }
+   &__link{
+      color: var(--title-color);
+      font-weight: var(--font-semi-bold);
+      transition: color .4s;
+
+      &:hover{
+         color: var(--first-color);
+      }
+   }
+   &__close{
+      position: absolute;
+      top: 1.15rem;
+      right: 1.5rem;
+      font-size: 1.25rem;
+   }
+}
+
+/* Show menu */
+.show-menu{
+   right: 0;
+}
+
+/* Add blur header */
+.blur-header::after{
+   content: '';
+   position: absolute;
+   width: 1000%;
+   height: 100%;
+   background-color: hsla(228, 24%, 6%, .2);
+   backdrop-filter: blur(16px);
+   -webkit-backdrop-filter: blur(16px);
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+/* Active link */
+.active-link{
+   color: var(--first-color);
+}
